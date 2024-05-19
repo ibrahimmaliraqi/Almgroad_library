@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest library</title>
+    <link rel="icon" href="https://telegra.ph/file/8801e0ecbb4a59a809a85.jpg" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+            position: relative;
+        }
+        h1::before {content 
+            display: block;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 1em;
+            color: #333;
+        }
+        .code-block {
+            position: relative;
+            text-align: left;
+            background-color: #2d2d2d;
+            padding: 1em;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            border: 2px solid black;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .copy-button.copied {
+            background-color: rgba(0, 0, 0, 0);
+            border-color: black;
+        }
+        details {
+            margin-bottom: 1em;
+            background-color: white;
+            padding: 10px;
+            margin: 0;
+            border-radius: 5px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            background-color: white;
+            margin: 0;
+            border: 0;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .weba {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 10px;
+}
+        .social-icons img {
+            width: 40px;
+            margin: 0 10px;
+        }
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="weba" src="https://telegra.ph/file/8801e0ecbb4a59a809a85.jpg" alt="Website Logo">
+
+        <h1>Pinterest Library</h1>
+        <p>This library enables users to search for images within the Pinterest application using Python.</p>
+        <details>
+            <summary>Library installation command</summary>
+            <div class="code-block">
+                <button class="copy-button" onclick="copyCode(this)">نسخ</button>
+                <pre><code class="language-python">pip install almgroad</code></pre>
+            </div>
+        </details>
+        <details>
+            <summary>Code for search</summary>
+            <div class="code-block">
+                <button class="copy-button" onclick="copyCode(this)">نسخ</button>
+                <pre><code class="language-python">from almgroad import Search_Pinterest
+gg = Search_Pinterest("quran")
+print(gg)</code></pre>
+            </div>
+        </details>
+        <hr>
+        <!-- Social Media Icons using Bootstrap -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com/ibrahimm.aliraqi"><img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" alt="Instagram"></a>
+            <a href="https://t.me/q3oooo"><img src="https://img.icons8.com/ios-glyphs/30/000000/telegram-app.png" alt="Telegram"></a>
+            <a href="https://www.facebook.com/profile.php?id=100088049186117&mibextid=ZbWKwL"><img src="https://img.icons8.com/ios-glyphs/30/000000/facebook.png" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/@ibrahimm.aliraqi"><img src="https://img.icons8.com/ios-glyphs/30/000000/tiktok.png" alt="TikTok"></a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+    <script>
+        function copyCode(button) {
+    const code = button.nextElementSibling.textContent;
+    navigator.clipboard.writeText(code).then(() => {
+        button.textContent = 'تم النسخ';
+        button.classList.add('copied');
+        setTimeout(() => {
+            button.textContent = 'نسخ';
+            button.classList.remove('copied');
+        }, 2000);
+    });
+}
+</script>
+</body>
+          </html>
