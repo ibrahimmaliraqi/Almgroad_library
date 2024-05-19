@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinterest library</title>
+    <title>Almgroad library</title>
     <link rel="icon" href="https://telegra.ph/file/8801e0ecbb4a59a809a85.jpg" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
     <!-- Bootstrap CSS -->
@@ -107,8 +107,8 @@
     <div class="container">
         <img class="weba" src="https://telegra.ph/file/8801e0ecbb4a59a809a85.jpg" alt="Website Logo">
 
-        <h1>Pinterest Library</h1>
-        <p>This library enables users to search for images within the Pinterest application using Python.</p>
+        <h1>Almgroad Library</h1>
+        <p>This library offers several services including chatting with ChatGPT, accessing Instagram and TikTok information, downloading Instagram and TikTok videos, searching on Pinterest, and also downloading from Pinterest, etc. Below is how to use it:</p>
         <details>
             <summary>Library installation command</summary>
             <div class="code-block">
@@ -117,12 +117,94 @@
             </div>
         </details>
         <details>
-            <summary>Code for search</summary>
+            <summary>To search on Pinterest</summary>
             <div class="code-block">
                 <button class="copy-button" onclick="copyCode(this)">نسخ</button>
                 <pre><code class="language-python">from almgroad import Search_Pinterest
-gg = Search_Pinterest("quran")
-print(gg)</code></pre>
+
+# Make sure to enter your desired search query (e.g., "quran") within the parentheses
+response = Search_Pinterest("quran")
+print(response)</code></pre>
+            </div>
+        </details>
+                <details>
+            <summary>To chat with ChatGPT</summary>
+            <div class="code-block">
+                <button class="copy-button" onclick="copyCode(this)">نسخ</button>
+                <pre><code class="language-python">from almgroad import GPT
+
+# Enter your message within the quotation marks
+response = GPT("Hi GPT")["answer"]
+print(response)</code></pre>
+            </div>
+        </details>
+                <details>
+            <summary>To get user information from Instagram</summary>
+            <div class="code-block">
+                <button class="copy-button" onclick="copyCode(this)">نسخ</button>
+                <pre><code class="language-python">from almgroad import Info_Insta 
+
+# Enter the Instagram username you want to get information about inside the parentheses
+response = Info_Insta("ibrahimm.aliraqi")
+print(response)</code></pre>
+            </div>
+        </details>
+                <details>
+            <summary>To get user information from TikTok</summary>
+            <div class="code-block">
+                <button class="copy-button" onclick="copyCode(this)">نسخ</button>
+                <pre><code class="language-python">from almgroad import Info_Tik 
+
+# Enter the TikTok username you want to get information about inside the parentheses
+response = Info_Tik("ibrahimm.aliraqi")
+print(response)</code></pre>
+            </div>
+        </details>
+                <details>
+            <summary>Downloading videos from Instagram</summary>
+            <div class="code-block">
+                <button class="copy-button" onclick="copyCode(this)">نسخ</button>
+                <pre><code class="language-python">from almgroad import instagram
+import asyncio 
+
+# Enter the Instagram video URL you want to download inside the parentheses
+response = asyncio.run(instagram("https://www.instagram.com/XXXXXXXX"))
+
+for url in response:
+    print(url)</code></pre>
+            </div>
+        </details>
+                <details>
+            <summary>Downloading videos from TikTok</summary>
+            <div class="code-block">
+                <button class="copy-button" onclick="copyCode(this)">نسخ</button>
+                <pre><code class="language-python">from almgroad import Tik_Tok
+
+# Enter the TikTok video URL you want to download inside the parentheses
+response = Tik_Tok("https://vt.tiktok.com/XXXXXX")["url"]
+print(response)</code></pre>
+            </div>
+        </details>
+
+                <details>
+            <summary>To get random general questions</summary>
+            <div class="code-block">
+                <button class="copy-button" onclick="copyCode(this)">نسخ</button>
+                <pre><code class="language-python">from almgroad import kt
+response = kt()["question"]
+print(response)</code></pre>
+            </div>
+        </details>
+                        <details>
+            <summary>To get prayer times</summary>
+            <div class="code-block">
+                <button class="copy-button" onclick="copyCode(this)">نسخ</button>
+                <pre><code class="language-python">from almgroad import prayer_times
+
+# Enter the city name or country name for which you want to get prayer times inside the parentheses
+# You can use Arabic language for city or country names
+response = prayer_times("Mosul")
+print(response)</code></pre>
             </div>
         </details>
         <hr>
@@ -151,4 +233,4 @@ print(gg)</code></pre>
 }
 </script>
 </body>
-          </html>
+</html>
